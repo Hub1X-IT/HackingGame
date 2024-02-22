@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.PlayerLoop;
 
 public class GameInput : MonoBehaviour {
-
+    
 
     public static GameInput Instance { get; private set; }
     
@@ -32,7 +32,7 @@ public class GameInput : MonoBehaviour {
         playerInputActions.PlayerWalking.Enable();
 
 
-        playerInputActions.Monitor.Enable();
+        // playerInputActions.Monitor.Enable();
 
 
         playerInputActions.PlayerWalking.Interact.performed += Interact_performed;
@@ -47,6 +47,12 @@ public class GameInput : MonoBehaviour {
     private void OnDestroy() {
         playerInputActions.PlayerWalking.Interact.performed -= Interact_performed;
         //playerInputActions.PlayerWalking.Pause.performed -= Pause_performed;
+
+
+        Keyboard.current.onTextInput -= Keyboard_onTextInput;
+        playerInputActions.Monitor.Exit.performed -= Exit_performed;
+        playerInputActions.Monitor.Remove.performed -= Remove_performed;
+
 
         playerInputActions.Dispose();
     }
@@ -91,5 +97,10 @@ public class GameInput : MonoBehaviour {
 
     private void Remove_performed(InputAction.CallbackContext obj) {
         OnRemoveAction?.Invoke(this, EventArgs.Empty);
+    }
+
+
+    public PlayerInputActions GetInputActions() {
+        return playerInputActions;
     }
 }

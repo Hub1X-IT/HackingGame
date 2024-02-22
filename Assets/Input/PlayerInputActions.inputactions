@@ -120,6 +120,54 @@
             ]
         },
         {
+            "name": "Desk",
+            "id": "69ef7312-dcbb-4a29-a88d-7ed7793b1001",
+            "actions": [
+                {
+                    "name": "Rotate",
+                    "type": "Value",
+                    "id": "a568a4f7-cd75-45cd-8093-f297049281cb",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Interact",
+                    "type": "Button",
+                    "id": "3cea411e-9de8-4283-8774-7273cabfaa22",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "9139da65-472c-4c9c-9c98-f15c0c09b599",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a1e6e3c3-2200-4c80-81cc-858a619994b2",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
             "name": "Monitor",
             "id": "e92ca324-be7b-435a-b7b1-d850e85f4422",
             "actions": [
