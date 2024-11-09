@@ -706,6 +706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textbox: {fileID: 2169182988963215338}
+  textinput: {fileID: 11400000, guid: 5a921d0cf7ce1bc499b44a5942fcd556, type: 2}
 --- !u!1 &2069297504557918594
 GameObject:
   m_ObjectHideFlags: 0
