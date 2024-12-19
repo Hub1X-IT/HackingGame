@@ -103,12 +103,21 @@ public class Computer : MonoBehaviour
         {
             GameInput.PlayerInputActions.Computer.Disable();
             CameraController.SetActiveCinemachineCamera(desk.DeskCinemachineCamera);
-            computerViewDisabledGameEvent.RaiseEvent();
+            computerViewDisabledGameEvent.TryRaiseEvent();
         }
     }
 
     public void ToggleComputerTrigger()
     {
         computerTrigger.gameObject.SetActive(!isInComputerView && CanEnterComputerView && IsComputerEnabled);
+    }
+
+    public void ExitComputerView()
+    {
+        // Method to be invoked by an event listener
+        if (isInComputerView)
+        {
+            SetComputerViewActive(false);
+        }
     }
 }
