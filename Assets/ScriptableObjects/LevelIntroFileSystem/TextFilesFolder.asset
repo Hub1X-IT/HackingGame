@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 698f366e50830bd4589f7dfc02775fbe, type: 3}
-  m_Name: DoorOpenedInDoorApp
+  m_Script: {fileID: 11500000, guid: 1f061d95d1e66e643b76f643f36de69d, type: 3}
+  m_Name: TextFilesFolder
   m_EditorClassIdentifier: 
-  oneTimeTrigger: 1
-  previousGameEvents:
-  - {fileID: 11400000, guid: 9e4ac48839ecc65448f7d9b3c1523f48, type: 2}
+  selfName: Text Files
+  isEncrypted: 0
+  childDataContainers:
+  - {fileID: 11400000, guid: d9b9074978ac402479f1d8de0e2faeab, type: 2}

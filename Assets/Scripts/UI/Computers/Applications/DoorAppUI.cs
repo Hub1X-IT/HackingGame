@@ -20,7 +20,7 @@ public class DoorAppUI : MonoBehaviour
     private const string DoorClosedText = "Door Closed";
     private const string DoorOpenText = "Door Open";
 
-    private void InitializeDoorApp(string appName)
+    public void InitializeDoorApp(string appName)
     {
         monitorAppUI = GetComponent<MonitorAppUI>();
         monitorAppUI.SetAppName(appName);
@@ -36,7 +36,7 @@ public class DoorAppUI : MonoBehaviour
         doorAppTextField.text = open ? DoorOpenText : DoorClosedText;
         if (open && onDoorOpenGameEvent != null)
         {
-            onDoorOpenGameEvent.RaiseEvent();
+            onDoorOpenGameEvent.TryRaiseEvent();
         }
     }
 }
